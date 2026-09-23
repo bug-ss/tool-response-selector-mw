@@ -1,0 +1,17 @@
+[project]
+name = "tool-response-selector-mw"
+version = "0.1.0"
+description = "LangChain middleware that sends only the relevant tool results to each model call."
+requires-python = ">=3.10"
+dependencies = [
+    "langchain>=1.0",
+    "langchain-typesafe>=0.0.1a2",
+]
+
+[dependency-groups]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+filterwarnings = ["ignore::langchain_core._api.beta_decorator.LangChainBetaWarning"]
